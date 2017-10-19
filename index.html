@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Workspace</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="#" />
+    <meta name="keywords" content="#" />
+    <meta name="author" content="Marjo Agaj" />
+    <!-- FavIcon -->
+    <link rel="shortcut icon"  href="img/favicon.png" alt="#">
+    <!-- Open Graph Properties -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="#"/>
+    <meta property="og:description" content="#"/>
+    <meta property="og:url" content="#"/>
+    <meta property="og:site_name" content="#"/>
+    <meta property="og:image" content="1200x627"/>
+    <!-- Twitter Card -->
+    <meta name=”twitter:card” content=”summary”/>
+    <meta name=”twitter:title” content=”#”/>
+    <meta name=”twitter:description” content=”#”/>
+    <meta name=”twitter:url” content=”#”/>
+    <meta name=”twitter:image” content="#" />
+    <!-- Components -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <!--Costum Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        #lineDrawing {
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: #212121;">
+
+
+<p style="font-family: font1; font-size: 70px; color: white; text-align: center;">Workspace</p>
+
+
+
+
+
+<div id="lineDrawing"> 
+    <svg viewBox="0 0 280 100">
+      <g fill="#efddb2"  stroke="#1d556f" stroke-width="1" class="lines">
+        <path d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z"></path>
+        <path d="M73 80V20H58v60h15z">
+        </path>
+        <path d="M58 80V49.77C58.5 33.23 71.58 20 88 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80H58zm75 0V20h-15v60h15z">
+        </path>
+        <path d="M118 80V49.77C118.5 33.23 131.58 20 148 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15zm-7.5-60a7.5 7.5 0 1 1-7.48 8v-1c.25-3.9 3.5-7 7.48-7z">
+        </path>
+        <path d="M133 65a15 15 0 0 1-15-15v-7.5h-15V50a30 30 0 0 0 30 30V65zm30 15V49.77C163.5 33.23 176.58 20 193 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15z">
+        </path>
+        <path d="M238 65a15 15 0 0 1 0-30c8.1 0 14.63 6.53 15 15h-15v15h30V49.89C267.5 33.23 254.42 20 238 20a30 30 0 0 0 0 60V65z" stroke-dasharray="301.8561706542969">
+        </path>
+        <path d="M260.48 65a7.5 7.5 0 1 1-7.48 8v-1c.26-3.9 3.5-7 7.48-7z">
+        </path>
+      </g>
+    </svg> 
+</div>
+
+<div data-0="visibility: visible;transform: translate(0px, 0px);" data-200="visibility:hidden;transform: translate(200px, 200px);">
+    <h2 style="color: white;">This is a parallax scrolling test</h2>
+    <p style="color: white;">let's get scrollin' ;-)</p>
+    <p class="arrows">▼&nbsp;▼&nbsp;▼</p>
+</div>
+
+<ul>
+  <li data-scroll-speed="2"><p>a</p></li>
+  <li data-scroll-speed="3"><p>b</p></li>
+  <li data-scroll-speed="4"><p>c</p></li>
+</ul>    
+ 
+<img src="img/favicon.png" class="wow animated wobble"/>
+
+<!-- Libraries -->
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script> 
+      new WOW().init();  //activate WOW.js, wow.js initializes anime.css on scroll    
+</script>
+<script type="text/javascript" src="js/anime.js"></script>
+<script type="text/javascript" src="js/data-speed.js"></script>
+<script type="text/javascript" src="js/skrollr.min.js"></script>
+<script type="text/javascript">
+  var s = skrollr.init({        //initin scrollr.js
+    edgeStrategy: 'set',
+    easing: {
+      WTF: Math.random,
+      inverted: function(p) {
+        return 1-p;
+      }
+    }
+  });
+  </script>
+
+
+<script>
+    var lineDrawing = anime({
+  targets: '#lineDrawing  path',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'easeInCubic',
+  duration: 2500,
+  delay: function(el, i) { return i * 250 },
+  // direction: 'alternate',  :this sends the item back
+  // loop: true :this makes look
+});
+</script>
+
+
+</body>
+</html>

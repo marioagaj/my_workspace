@@ -1,0 +1,13 @@
+body{overflow-x: hidden;}
+/*Fonts*/
+@font-face{font-family: font1;src:url("../fonts/regularfont.ttf");}
+@font-face{font-family: font2;src:url("../fonts/boldfont.ttf");}
+
+ul li {
+        display: inline-block;
+        margin-top: 700px;
+      }
+ul li p {
+        font-size: 50px;
+        font-family: font1;
+      }
